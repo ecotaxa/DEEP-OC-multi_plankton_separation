@@ -3,7 +3,7 @@
 </div>
 
 # DEEP-OC-multi_plankton_separation
-[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-emmaamblard-DEEP-OC-multi_plankton_separation/master)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-emmaamblard-DEEP-OC-multi_plankton_separation/job/master)
+[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-emmaamblard-DEEP-OC-multi_plankton_separation/test)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-emmaamblard-DEEP-OC-multi_plankton_separation/job/test)
 
 This is a container that will run the [multi_plankton_separation](https://github.com/emmaamblard/multi_plankton_separation) application leveraging the DEEP as a Service API component ([DEEPaaS API V2](https://github.com/indigo-dc/DEEPaaS)).
 
