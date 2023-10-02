@@ -1,0 +1,37 @@
+{
+    "title": "multi_plankton_separation",
+    "summary": "Automatic separation of objects in images containing multiple plankton organisms",
+    "description": [
+        "multi_plankton_separation is an application using the DEEPaaS API.\n",
+        "Write additional information for your users (how to predict, how to retrain,",
+        "dataset description, training description, etc)."
+    ],
+    "keywords": [
+        "docker",
+        "api-v2"
+    ],
+    "license": "MIT",
+    "date_creation": "2023-10-02",
+    "sources": {
+		"dockerfile_repo": "https://github.com/emmaamblard/DEEP-OC-multi_plankton_separation",
+		"docker_registry_repo": "deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation",
+		"code": "https://github.com/emmaamblard/multi_plankton_separation"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-emmaamblard-DEEP-OC-multi_plankton_separation/master",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-emmaamblard-DEEP-OC-multi_plankton_separation/job/master"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-marathon-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
