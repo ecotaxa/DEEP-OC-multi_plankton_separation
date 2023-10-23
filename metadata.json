@@ -3,8 +3,8 @@
     "summary": "Automatic separation of objects in images containing multiple plankton organisms",
     "description": [
         "multi_plankton_separation is an application using the DEEPaaS API.\n",
-        "Write additional information for your users (how to predict, how to retrain,",
-        "dataset description, training description, etc)."
+        "It provides a trained model to detect each object on multiple plankton images, and return the separation lines.\n",
+        "It is not possible to train a new model with this module."
     ],
     "keywords": [
         "docker",

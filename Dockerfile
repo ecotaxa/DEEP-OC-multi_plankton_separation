@@ -11,7 +11,7 @@
 # [!] Note: For the Jenkins CI/CD pipeline, input args are defined inside the
 # Jenkinsfile, not here!
 
-ARG tag=2.9.1
+ARG tag=2.1.0-cuda12.1-cudnn8-runtime
 
 # Base image, e.g. tensorflow/tensorflow:2.9.1
 FROM pytorch/pytorch:${tag}
@@ -80,6 +80,10 @@ RUN git clone -b $branch https://github.com/emmaamblard/multi_plankton_separatio
     cd  multi_plankton_separation && \
     pip3 install --no-cache-dir -e . && \
     cd ..
+
+RUN pip3 install matplotlib scikit-image
+
+ADD https://github.com/emmaamblard/multi_plankton_separation/releases/download/v1.0.0-alpha/default_mask_multi_plankton.pt multi_plankton_separation/models/default_mask_multi_plankton.pt
 
 # Open ports: DEEPaaS (5000), Monitoring (6006), Jupyter (8888)
 EXPOSE 5000 6006 8888
