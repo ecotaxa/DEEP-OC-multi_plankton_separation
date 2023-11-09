@@ -9,8 +9,8 @@ pipeline {
 
     environment {
         dockerhub_repo = "deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation"
-        base_cpu_tag = "2.9.1"
-        base_gpu_tag = "2.9.1-gpu"
+        base_cpu_tag = "2.1.0-cuda12.1-cudnn8-runtime"
+        base_gpu_tag = "2.1.0-cuda12.1-cudnn8-runtime"
     }
 
     stages {
