@@ -84,6 +84,7 @@ RUN git clone -b $branch https://github.com/emmaamblard/multi_plankton_separatio
 RUN pip3 install matplotlib scikit-image
 
 ADD https://github.com/emmaamblard/multi_plankton_separation/releases/download/v1.0.0-alpha/default_mask_multi_plankton.pt multi_plankton_separation/models/default_mask_multi_plankton.pt
+ADD https://github.com/ecotaxa/multi_plankton_separation/releases/download/v1.0.1-alpha/learn_placton_pano_plus5000_8epoch.zip multi_plankton_separation/models/learn_placton_pano_plus5000_8epoch.zip
 
 # Open ports: DEEPaaS (5000), Monitoring (6006), Jupyter (8888)
 EXPOSE 5000 6006 8888
