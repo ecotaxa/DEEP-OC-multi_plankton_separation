@@ -5,7 +5,7 @@
 # DEEP-OC-multi_plankton_separation
 [![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-emmaamblard-DEEP-OC-multi_plankton_separation/master)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-emmaamblard-DEEP-OC-multi_plankton_separation/job/master)
 
-This is a container that will run the [multi_plankton_separation](https://github.com/emmaamblard/multi_plankton_separation) application leveraging the DEEP as a Service API component ([DEEPaaS API V2](https://github.com/indigo-dc/DEEPaaS)).
+This is a container that will run the [multi_plankton_separation](https://github.com/ecotaxa/multi_plankton_separation) application leveraging the DEEP as a Service API component ([DEEPaaS API V2](https://github.com/indigo-dc/DEEPaaS)).
 
     
 ## Running the container
@@ -26,7 +26,7 @@ This command will pull the Docker container from the Docker Hub [deephdc](https:
 
 If you want to build the container directly in your machine (because you want to modify the `Dockerfile` for instance) follow the following instructions:
 ```bash
-git clone https://github.com/emmaamblard/DEEP-OC-multi_plankton_separation
+git clone https://github.com/ecotaxa/DEEP-OC-multi_plankton_separation
 cd DEEP-OC-multi_plankton_separation
 docker build -t deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation .
 docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 deephdc/uc-emmaamblard-deep-oc-multi_plankton_separation
