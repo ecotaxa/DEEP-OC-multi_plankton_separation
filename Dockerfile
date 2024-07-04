@@ -16,8 +16,8 @@ ARG tag=2.1.0-cuda12.1-cudnn8-runtime
 # Base image, e.g. tensorflow/tensorflow:2.9.1
 FROM pytorch/pytorch:${tag}
 
-LABEL maintainer='Emma Amblard'
-LABEL version='0.0.1'
+LABEL maintainer='Jean-Olivier Irisson'
+LABEL version='0.0.2'
 # Automatic separation of objects in images containing multiple plankton organisms
 
 # What user branch to clone [!]
@@ -76,14 +76,14 @@ RUN if [ "$jlab" = true ]; then \
     else echo "[INFO] Skip JupyterLab installation!"; fi
 
 # Install user app
-RUN git clone -b $branch https://github.com/emmaamblard/multi_plankton_separation && \
+RUN git clone -b $branch https://github.com/ecotaxa/multi_plankton_separation && \
     cd  multi_plankton_separation && \
     pip3 install --no-cache-dir -e . && \
     cd ..
 
 RUN pip3 install matplotlib scikit-image
 
-ADD https://github.com/emmaamblard/multi_plankton_separation/releases/download/v1.0.0-alpha/default_mask_multi_plankton.pt multi_plankton_separation/models/default_mask_multi_plankton.pt
+ADD https://github.com/ecotaxa/multi_plankton_separation/releases/download/v1.0.0-alpha/default_mask_multi_plankton.pt multi_plankton_separation/models/default_mask_multi_plankton.pt
 ADD https://github.com/ecotaxa/multi_plankton_separation/releases/download/v1.0.1-alpha/learn_placton_pano_plus5000_8epoch.zip multi_plankton_separation/models/learn_placton_pano_plus5000_8epoch.zip
 
 # Open ports: DEEPaaS (5000), Monitoring (6006), Jupyter (8888)
