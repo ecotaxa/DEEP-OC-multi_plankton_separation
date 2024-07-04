@@ -51,15 +51,15 @@ ENV LANG C.UTF-8
 WORKDIR /srv
 
 # Install rclone (needed if syncing with NextCloud for training; otherwise remove)
-RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
-    dpkg -i rclone-current-linux-amd64.deb && \
-    apt install -f && \
-    mkdir /srv/.rclone/ && \
-    touch /srv/.rclone/rclone.conf && \
-    rm rclone-current-linux-amd64.deb && \
-    rm -rf /var/lib/apt/lists/*
-
-ENV RCLONE_CONFIG=/srv/.rclone/rclone.conf
+# RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
+#    dpkg -i rclone-current-linux-amd64.deb && \
+#    apt install -f && \
+#    mkdir /srv/.rclone/ && \
+#    touch /srv/.rclone/rclone.conf && \
+#    rm rclone-current-linux-amd64.deb && \
+#    rm -rf /var/lib/apt/lists/*
+#
+# ENV RCLONE_CONFIG=/srv/.rclone/rclone.conf
 
 # Initialization scripts
 RUN git clone https://github.com/deephdc/deep-start /srv/.deep-start && \
