@@ -81,7 +81,7 @@ RUN git clone -b $branch https://github.com/ecotaxa/multi_plankton_separation &&
     pip3 install --no-cache-dir -e . && \
     cd ..
 
-RUN pip3 install matplotlib scikit-image
+RUN pip3 install matplotlib scikit-image transformers
 
 ADD https://github.com/ecotaxa/multi_plankton_separation/releases/download/v1.0.0-alpha/default_mask_multi_plankton.pt multi_plankton_separation/models/default_mask_multi_plankton.pt
 ADD https://github.com/ecotaxa/multi_plankton_separation/releases/download/v1.0.1-alpha/learn_placton_pano_plus5000_8epoch.zip multi_plankton_separation/models/learn_placton_pano_plus5000_8epoch.zip
